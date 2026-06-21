@@ -141,11 +141,10 @@ class TrueNASUptimeSensor(TrueNASSensor):
 
     async def refresh(self) -> None:
         """Refresh TrueNAS sensors."""
-        await self.coordinator.async_refresh()
-        
+        await self.coordinator.async_request_refresh()
 
     async def restart(self) -> None:
-        """Restart TrueNAS systen."""
+        """Restart TrueNAS system."""
         await self.hass.async_add_executor_job(
             self.coordinator.api.query,
             "system.reboot",
@@ -153,7 +152,7 @@ class TrueNASUptimeSensor(TrueNASSensor):
         )
 
     async def stop(self) -> None:
-        """Shutdown TrueNAS systen."""
+        """Shutdown TrueNAS system."""
         await self.hass.async_add_executor_job(
             self.coordinator.api.query,
             "system.shutdown",

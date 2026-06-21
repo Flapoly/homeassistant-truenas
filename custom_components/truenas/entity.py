@@ -366,6 +366,10 @@ class TrueNASEntity(CoordinatorEntity[TrueNASCoordinator], Entity):
         """Stop function."""
         self._raise_unsupported("stop")
 
+    async def refresh(self):
+        """Refresh function."""
+        self._raise_unsupported("refresh")
+
     async def restart(self):
         """Restart function."""
         self._raise_unsupported("restart")

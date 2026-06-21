@@ -60,7 +60,7 @@ dataset_snapshot:
 
 system_refresh:
   name: Refresh TrueNAS
-  description: Refresh the TrueNAS system (target the Uptime sensor).
+  description: Immediate refresh all TrueNAS sensors (target the Uptime sensor).
   target:
     entity:
       integration: truenas
