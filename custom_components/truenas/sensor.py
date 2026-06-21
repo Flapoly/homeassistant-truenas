@@ -281,7 +281,8 @@ class TrueNASDatasetSensor(TrueNASSensor):
         Args:
             force_umount: Force umount dataset mountpoints before locking.
         """
-        await self.coordinator.async_request_refresh()
+        #Force refresh before to ensure locked state is up to date, as the dataset may have been unlocked by another process.
+        await self.coordinator.async_refresh()
         if self._data.get("locked", True):
             self._log_already("locked")
             return
@@ -300,7 +301,8 @@ class TrueNASDatasetSensor(TrueNASSensor):
             recursive: Unlock datasets recursively.
             force: Force the unlock operation.
         """
-        await self.coordinator.async_request_refresh()
+        #Force refresh before to ensure locked state is up to date, as the dataset may have been unlocked by another process.
+        await self.coordinator.async_refresh()
         if not self._data.get("locked", True):
             self._log_already("unlocked")
             return
