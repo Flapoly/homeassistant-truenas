@@ -128,6 +128,9 @@ API_RSYNCTASK_RUN = "rsynctask.run"
 API_REPLICATION_RUN = "replication.run"
 API_SNAPSHOTTASK_RUN = "pool.snapshottask.run"
 
+SERVICE_SYSTEM_REFRESH = "system_refresh"
+SCHEMA_SERVICE_SYSTEM_REFRESH = {}
+
 SERVICE_SYSTEM_REBOOT = "system_reboot"
 SCHEMA_SERVICE_SYSTEM_REBOOT = {}
 

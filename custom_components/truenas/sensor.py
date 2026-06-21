@@ -139,6 +139,11 @@ class TrueNASUptimeSensor(TrueNASSensor):
             return utc_from_timestamp(val)
         return None
 
+    async def refresh(self) -> None:
+        """Refresh TrueNAS sensors."""
+        await self.coordinator.async_refresh()
+        
+
     async def restart(self) -> None:
         """Restart TrueNAS systen."""
         await self.hass.async_add_executor_job(

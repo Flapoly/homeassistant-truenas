@@ -58,6 +58,14 @@ dataset_snapshot:
       integration: truenas
       domain: sensor
 
+system_refresh:
+  name: Refresh TrueNAS
+  description: Refresh the TrueNAS system (target the Uptime sensor).
+  target:
+    entity:
+      integration: truenas
+      domain: sensor
+
 system_reboot:
   name: Reboot TrueNAS
   description: Reboot the TrueNAS system (target the Uptime sensor).
