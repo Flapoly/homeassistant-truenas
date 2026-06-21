@@ -197,6 +197,7 @@ TrueNAS object they act on). Each action has a name and description in
 | `dataset_snapshot` | Dataset sensor | Create an immediate `custom-<timestamp>` snapshot of a dataset |
 | `dataset_lock` | Dataset sensor | Lock an encrypted dataset |
 | `dataset_unlock` | Dataset sensor | Unlock an encrypted dataset with a passphrase |
+| `system_refresh` | Uptime sensor | force an immediate refresh of all TrueNAS sensors |
 | `system_reboot` · `system_shutdown` | Uptime sensor | Reboot / shut down the TrueNAS system |
 
 Example:
